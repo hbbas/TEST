@@ -12,10 +12,15 @@ window.onload=function(){
 	
 	
 	
-	var inputInf=window.prompt("输入游戏的行数和列数和关卡数，空格分隔如：15 15 1");
+	var inputInf=window.prompt("杈撳叆娓告垙琛屾暟鍒楁暟鍜屽叧鍗℃暟锛氬15 15 1");
 	var inputNum=inputInf.split(" ");
 	rows=inputNum[0];col=inputNum[1];level=inputNum[2];
 	
+	if(col==null){
+		rows=15;
+		col=15;
+		level=1;
+	}
 	//alert(rows);
 	
 	for(var inr =0;inr<rows;inr++){
@@ -167,7 +172,7 @@ window.onload=function(){
 		for(var vari in tetris){
 			if (vari== "setTetris"){
 				continue;
-			}//排除方法
+			}//锟脚筹拷锟斤拷锟斤拷
 			
 			for(var vari_pos in this[vari]){
 				if(vari_pos[0]=="y")
@@ -186,7 +191,7 @@ window.onload=function(){
 		for(var vari in this){
 			if (vari== "setTetris"){
 				continue;
-			}//排除方法
+			}//锟脚筹拷锟斤拷锟斤拷
 			for(var vari_pos in this[vari]){
 				if(vari_pos[0]=="x"){
 					temp=this[vari][vari_pos];
@@ -376,7 +381,7 @@ window.onload=function(){
 		for(var inr =0;inr<rows;inr++){
 			for(var ini =0; ini<col;ini++){
 				mytable.rows[inr].cells[ini].bgColor="white";
-			};//刷白
+			};//刷锟斤拷
 		}
 		for(var inr =0;inr<rows;inr++){
 			for(var ini =0; ini<col;ini++){
